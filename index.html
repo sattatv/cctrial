@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Webpage Title</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-front">
+        <img class="card-image" src="https://i.imgur.com/TvdlpME.png" alt="Bank Card Blank">
+        <div class="card-details">
+          <div class="card-number-display">
+            <span id="card-number-display"></span>
+          </div>
+          <div class="expiration-date-display">
+            <span id="expiration-date-display"></span>
+          </div>
+          <div class="cardholder-name-display">
+            <span id="cardholder-name-display"></span>
+          </div>
+        </div>
+      </div>
+      <div class="card-back">
+        <img class="card-image" src="https://i.imgur.com/7uWi3v9.png" alt="Bank Card Back">
+        <div class="card-details cvv-display">
+          <span id="cvv-display"></span>
+        </div>
+      </div>
+    </div>
+  
+    <form>
+      <div class="form-group">
+        <label for="card-number">Card Number:</label>
+        <input type="text" id="card-number" class="card-number" maxlength="16" oninput="updateCard()">
+      </div>
+  
+      <div class="form-group">
+        <label for="expiration-date">Expiration Date:</label>
+        <input type="text" id="expiration-date" class="expiration-date" maxlength="4" oninput="updateCard()">
+      </div>
+  
+      <div class="form-group">
+        <label for="cardholder-name">Cardholder Name:</label>
+        <input type="text" id="cardholder-name" class="cardholder-name" oninput="updateCard()">
+      </div>
+  
+      <div class="form-group">
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" class="cvv" oninput="updateCard()" onFocus="showBack()" onBlur="showFront()">
+      </div>
+    </form>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
